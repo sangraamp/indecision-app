@@ -43,6 +43,12 @@ export default class IndecisionApp extends React.Component {
 		}))
 	}
 
+	handleClearSelectedOption = () => {
+		this.setState(() => ({
+			selectedOption: undefined,
+		}))
+	}
+
 	componentDidMount() {
 		try {
 			const options = JSON.parse(localStorage.getItem('options'))
@@ -82,7 +88,10 @@ export default class IndecisionApp extends React.Component {
 					handleDeleteOption={this.handleDeleteOption}
 				/>
 				<AddOption handleAddOption={this.handleAddOption} />
-				<OptionModal selectedOption={this.state.selectedOption} />
+				<OptionModal
+					selectedOption={this.state.selectedOption}
+					handleClearSelectedOption={this.handleClearSelectedOption}
+				/>
 			</div>
 		)
 	}
