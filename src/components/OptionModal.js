@@ -1,6 +1,5 @@
 import React from 'react'
 import Modal from 'react-modal'
-import { ProgressPlugin } from 'webpack'
 
 const OptionModal = (props) => (
 	<Modal isOpen={!!props.selectedOption} contentLabel="Selected Option">

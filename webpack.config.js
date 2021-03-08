@@ -22,4 +22,5 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, 'public'), // setting up webpack-dev-server
 	},
+	mode: 'development',
 }
