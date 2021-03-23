@@ -1,0 +1,40 @@
+// Big button
+.big-button {
+	background-color: $purple;
+	border: none;
+	border-bottom: 6px solid darken($purple, 10%);
+	color: white;
+	font-weight: bold;
+	font-size: $l-size;
+	width: 100%;
+	margin-bottom: $m-size;
+	padding: 24px;
+}
+
+.big-button:disabled {
+	opacity: 0.5;
+}
+
+@media (min-width: $desktop-breakpoint) {
+	.big-button {
+		margin-bottom: $xl-size;
+	}
+}
+
+// Other buttons
+.button {
+	background-color: $purple;
+	border: none;
+	border-bottom: 3px solid darken($purple, 10%);
+	color: white;
+	font-weight: 500;
+	padding: $s-size;
+}
+
+// BEM naming convention for modifiers (an alternate style)
+.button--link {
+	background: none;
+	border: none;
+	color: $off-white;
+	padding: 0;
+}

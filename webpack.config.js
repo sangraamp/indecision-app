@@ -12,9 +12,14 @@ module.exports = {
 		rules: [
 			{
 				// run all .js files through babel except the ones in node_modules
-				loader: 'babel-loader',
 				test: /\.js$/,
+				loader: 'babel-loader',
 				exclude: /node_modules/,
+			},
+			{
+				test: /\.s?css$/,
+				// an array of loaders == use
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		],
 	},
